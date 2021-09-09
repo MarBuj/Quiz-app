@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.startBtn,
+.infoCard,
+.quizCard,
+.resultCard {
+  position: absolute;
+}
+
+.infoCard-header {
+  -webkit-animation: bouncing 1s infinite;
+          animation: bouncing 1s infinite;
+}
+
+.option {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.startBtn,
+.nextBtn,
+.infoCard,
+.quizCard,
+.resultCard {
+  display: none;
+  opacity: 0;
+}
+
+.fa-trophy {
+  font-size: 15vw;
+  color: #ffc107;
+  -webkit-animation: bouncing 1s infinite;
+          animation: bouncing 1s infinite;
+}
+
+.fa-times-circle {
+  font-size: clamp(1.2rem, 3vw + 0.8rem, 2rem);
+  color: #dc3545;
+}
+
+.fa-check-circle {
+  font-size: clamp(1.2rem, 3vw + 0.8rem, 2rem);
+  color: #198754;
+}
+
+.option {
+  cursor: pointer;
+}
+
+.disable {
+  pointer-events: none;
+}
+
+@-webkit-keyframes bouncing {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bouncing {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=style.css.map */

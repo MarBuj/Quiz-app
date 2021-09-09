@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/01a0a04e7b.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body class="d-flex justify-content-center align-items-center p-3">
+        <!-- Start Quiz Button -->
+        <div class="startBtn">
+            <button type="button" class="btn btn-outline-success">Start Quiz</button>
+        </div>
+
+        <!-- Info card -->
+        <div class="infoCard card border-dark container">
+            <div class="card-header d-flex justify-content-center"><span class="infoCard-header">Important!</span></div>
+            <div class="card-body text-dark">
+            <h5 class="card-title text-center">Rules of the game:</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">1. You will have only 15 seconds per each question.</li>
+                <li class="list-group-item">2. Selected answer can not be reselected.</li>
+                <li class="list-group-item">3. You can't select any option when time goes off.</li>
+                <li class="list-group-item">4. You can't exit the game while you're playing.</li>
+                <li class="list-group-item">5. You'll get the points on the basis of your corrent answers.</li>
+            </ul>
+            </div>
+            <div class="card-footer d-flex justify-content-center">
+                <button type="button" class="continueBtn btn btn-outline-success me-2">Continue</button>
+                <button type="button" class="exitBtn btn btn-outline-danger">Exit</button>
+            </div>
+        </div>
+
+        <!-- Quiz card -->
+        <div class="quizCard card border-dark container">
+            <div class="card-header d-flex justify-content-center">
+                <div class="time_text me-2">Time Left:</div>
+                <div class="time_counter">15</div>
+            </div>
+            <div class="card-body text-dark">
+            <!-- Question title -->
+            <h5 class="question card-title text-center"></h5>
+            <ul class="optionList list-group list-group-flush">
+                <!-- Question option nr.1 -->
+                <li class="option option1 list-group-item d-flex justify-content-between align-items-center"></li>
+                <!-- Question option nr.2 -->
+                <li class="option option2 list-group-item d-flex justify-content-between align-items-center"></li>
+                <!-- Question option nr.3 -->
+                <li class="option option3 list-group-item d-flex justify-content-between align-items-center"></li>
+                <!-- Question option nr.4 -->
+                <li class="option option4 list-group-item d-flex justify-content-between align-items-center"></li>
+            </ul>
+            </div>
+            <div class="card-footer d-flex align-items-center">
+                <!-- Question counter -->
+                <div class="d-flex justify-content-center w-50"><p class="card-text"><span class="questionCounter"></span> / <span class="questionAmount"></span> Questions</p></div>
+                <div class="d-flex justify-content-center w-50"><button type="button" class="nextBtn btn btn-outline-secondary">Next</button></div>
+            </div>
+        </div>
+
+        <!-- Result Card -->
+        <div class="resultCard card border-success container">
+            <div class="card-body text-dark">
+            <div class="card-text d-flex justify-content-center mb-2"><i class="fas fa-trophy"></i></div>
+            <h5 class="card-title text-center">You've completed the Quiz!</h5>
+            <!-- User score -->
+            <div class="d-flex justify-content-center"><p class="resultText">Result: <span class="result"></span> out of <span class="resultAmount"></span></p></div>
+            </div>
+            <div class="card-footer d-flex justify-content-evenly align-items-center mb-2">
+                <button type="button" class="replyBtn btn btn-outline-success me-2">Replay</button>
+                <button type="button" class="quitBtn btn btn-outline-danger">Quit</button>
+            </div>
+        </div>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Questions -->
+    <script src="js/questions.js"></script>
+    <!-- JS -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
