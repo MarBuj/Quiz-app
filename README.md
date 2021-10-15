@@ -1,3 +1,5 @@
+DEMO: https://marbuj.github.io/Quiz-app/
+
 Quick project of building a Quiz application with a timer using HTML CSS & JavaScript.
 
 3rd party libs:
